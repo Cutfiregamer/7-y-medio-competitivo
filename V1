@@ -1,0 +1,43 @@
+Funcion x <- robar
+	definir x Como Real
+	x= Aleatorio(1,10)
+	si x>7
+		x=0.5
+	FinSi
+Fin Funcion
+
+Algoritmo siete_y_medio_j_vs_j
+	definir jugador1, jugador2, salir1, salir2 Como Real
+	jugador1=jugador1+robar()
+	jugador2=jugador2+robar()
+	escribir "J1 tiene ", jugador1
+	escribir "J2 tiene ", jugador2
+	mientras salir1==0 o salir2==0
+		si salir1==0
+			escribir "J1 quieres seguir?"
+			escribir "0 es si, otra cosa es no"
+			leer salir1
+			si salir1==0
+				jugador1=jugador1+robar()
+				escribir "J1 tienes ", jugador1
+			FinSi
+			si jugador1>7.5
+				salir1=1
+			FinSi
+		FinSi
+		si salir2==0
+			escribir "J2 quieres seguir?"
+			escribir "0 es si, otra cosa es no"
+			leer salir2
+			si salir2==0
+				jugador2=jugador2+robar()
+				escribir "J2 tienes ", jugador2
+			FinSi
+			si jugador2>7.5
+				salir2=1
+			FinSi
+		FinSi
+	FinMientras
+	escribir "J1 tiene ", jugador1
+	escribir "J2 tiene ", jugador2
+FinAlgoritmo
